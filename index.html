@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AgroSmart - Aplikasi Pertanian Cerdas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="logo-wrap">
+    <span class="logo-icon">🌾</span>
+    <h1>AgroSmart</h1>
+    <p>Pertanian Cerdas di Genggaman Anda</p>
+    <div class="bar"><div class="bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-title">🌾 AgroSmart</div>
+      <div class="header-sub">Aplikasi Pertanian Cerdas</div>
+    </div>
+    <div class="header-badge">v2.0</div>
+  </div>
+</div>
+
+<
+<!-- NAV TABS -->
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="showSection('home')">
+    <span class="ti">🏠</span><span class="tl">Beranda</span>
+  </button>
+  <button class="nav-tab" onclick="showSection('kalkulator')">
+    <span class="ti">🧮</span><span class="tl">Kalkulator</span>
+  </button>
+  <button class="nav-tab" onclick="showSection('unsur')">
+    <span class="ti">🔬</span><span class="tl">Unsur Hara</span>
+  </button>
+  <button class="nav-tab" onclick="showSection('analisis')">
+    <span class="ti">📊</span><span class="tl">Analisis</span>
+  </button>
+</div>
+
+
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- HOME -->
+  <div id="home" class="section active">
+    <div class="home-banner">
+      <h2>Selamat Datang, Petani! 👋</h2>
+      <p>Kelola pertanian Anda lebih cerdas dengan kalkulator pupuk, panduan unsur hara, dan analisis usaha tani.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-icon">🌶️</div>
+        <div class="stat-val">4</div>
+        <div class="stat-lbl">Jenis Tanaman</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon">🧪</div>
+        <div class="stat-val">16</div>
+        <div class="stat-lbl">Unsur Hara</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon">📈</div>
+        <div class="stat-val">ROI</div>
+        <div class="stat-lbl">Analisis B/C</div>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-item" onclick="showSection('kalkulator')">
+        <span class="mi-icon">⚗️</span>
+        <div class="mi-title">Kalkulator Pupuk</div>
+        <div class="mi-desc">Hitung dosis tepat untuk cabai, padi, jagung & palawija</div>
+      </div>
+      <div class="menu-item orange" onclick="showSection('unsur')">
+        <span class="mi-icon">🔬</span>
+        <div class="mi-title">Unsur Hara</div>
+        <div class="mi-desc">NPK, Makro & Mikro beserta gejala kekurangan</div>
+      </div>
+      <div class="menu-item blue" onclick="showSection('analisis')">
+        <span class="mi-icon">📊</span>
+        <div class="mi-title">Analisis Usaha</div>
+        <div class="mi-desc">Hitung BEP, R/C ratio & keuntungan bersih</div>
+      </div>
+      <div class="menu-item red" onclick="showSection('unsur'); setNtab('defisiensi')">
+        <span class="mi-icon">🚨</span>
+        <div class="mi-title">Gejala Penyakit</div>
+        <div class="mi-desc">Identifikasi kekurangan hara dari gejala tanaman</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:4px;">
+      <div class="card-title"><span>📅</span> Kalender Tanam</div>
+      <div class="season-row">
+        <div class="season-card">
+          <div class="sc-icon">🌶️</div>
+          <div class="sc-name">Cabai</div>
+          <div class="sc-info">Sep – Nov</div>
+        </div>
+        <div class="season-card">
+          <div class="sc-icon">🌾</div>
+          <div class="sc-name">Padi</div>
+          <div class="sc-info">Okt – Mar</div>
+        </div>
+        <div class="season-card">
+          <div class="sc-icon">🌽</div>
+          <div class="sc-name">Jagung</div>
+          <div class="sc-info">Mar – Jun</div>
+        </div>
+        <div class="season-card">
+          <div class="sc-icon">🥜</div>
+          <div class="sc-name">Kedelai</div>
+          <div class="sc-info">Apr – Jul</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span>💡</span> Tips Hari Ini</div>
+      <div class="tip-item">
+        <div class="tip-icon">🌡️</div>
+        <div class="tip-text"><strong>Pemupukan di Musim Kemarau</strong>Lakukan pemupukan di pagi hari (06.00-09.00) untuk mengurangi penguapan dan memastikan pupuk terserap optimal oleh tanaman.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">💧</div>
+        <div class="tip-text"><strong>Efisiensi Air dengan Mulsa</strong>Gunakan mulsa plastik hitam perak untuk menjaga kelembaban tanah dan mengurangi kebutuhan irigasi hingga 40%.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KALKULATOR -->
+  <div id="kalkulator" class="section">
+    <div class="card">
+      <div class="card-title"><span>🌱</span> Pilih Jenis Tanaman</div>
+      <div class="plant-grid">
+        <div class="plant-btn active" onclick="selectPlant('cabai',this)" id="plant-cabai">
+          <span class="pb-icon">🌶️</span>
+          <div class="pb-name">Cabai</div>
+        </div>
+        <div class="plant-btn" onclick="selectPlant('padi',this)" id="plant-padi">
+          <span class="pb-icon">🌾</span>
+          <div class="pb-name">Padi</div>
+        </div>
+        <div class="plant-btn" onclick="selectPlant('jagung',this)" id="plant-jagung">
+          <span class="pb-icon">🌽</span>
+          <div class="pb-name">Jagung</div>
+        </div>
+        <div class="plant-btn" onclick="selectPlant('palawija',this)" id="plant-palawija">
+          <span class="pb-icon">🥜</span>
+          <div class="pb-name">Palawija</div>
+        </div>
+      </div>
+
+      <div id="palawija-sub" style="display:none; margin-bottom:14px;">
+        <label class="form-label">Jenis Palawija</label>
+        <select class="form-control" id="palawija-type">
+          <option value="kedelai">Kedelai</option>
+          <option value="kacang-tanah">Kacang Tanah</option>
+          <option value="ubi-kayu">Ubi Kayu</option>
+          <option value="ubi-jalar">Ubi Jalar</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Fase Pertumbuhan</label>
+        <select class="form-control" id="fase">
+          <option value="vegetatif">Vegetatif (Pertumbuhan Awal)</option>
+          <option value="generatif">Generatif (Pembungaan/Pembuahan)</option>
+          <option value="pemeliharaan">Pemeliharaan Rutin</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Luas Lahan (m²)</label>
+        <input type="number" class="form-control" id="luas" placeholder="Contoh: 1000" value="1000">
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label class="form-label">pH Tanah</label>
+          <select class="form-control" id="ph-tanah">
+            <option value="asam">Asam (&lt;6)</option>
+            <option value="normal" selected>Normal (6-7)</option>
+            <option value="basa">Basa (&gt;7)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Kondisi Tanah</label>
+          <select class="form-control" id="kondisi">
+            <option value="subur">Subur</option>
+            <option value="sedang" selected>Sedang</option>
+            <option value="kurang">Kurang Subur</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="hitungPupuk()">🧮 Hitung Dosis Pupuk</button>
+    </div>
+
+    <div id="hasil-pupuk" class="result-box">
+      <div class="result-title">📋 REKOMENDASI DOSIS PUPUK</div>
+      <div id="tanaman-info" style="font-size:13px; opacity:0.85; margin-bottom:12px;"></div>
+      <div class="result-grid" id="result-grid"></div>
+      <div id="catatan-pupuk" style="margin-top:12px; font-size:12px; opacity:0.8; line-height:1.6;"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span>📖</span> Panduan Aplikasi Pupuk</div>
+      <div class="tip-item">
+        <div class="tip-icon">1️⃣</div>
+        <div class="tip-text"><strong>Pupuk Dasar (Sebelum Tanam)</strong>Campurkan pupuk organik + NPK ke tanah 7-10 hari sebelum tanam. Lahan harus lembab.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">2️⃣</div>
+        <div class="tip-text"><strong>Pupuk Susulan I (14-21 HST)</strong>Berikan Urea/ZA pada jarak 10-15 cm dari batang. Tutup dengan tanah tipis.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">3️⃣</div>
+        <div class="tip-text"><strong>Pupuk Susulan II (35-45 HST)</strong>Berikan NPK+KCl saat masuki fase generatif untuk mendukung pembungaan dan pembuahan.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNSUR HARA -->
+  <div id="unsur" class="section">
+    <div class="ntab-wrap">
+      <button class="ntab active" onclick="setNtab('semua',this)">Semua</button>
+      <button class="ntab" onclick="setNtab('npk',this)">NPK Utama</button>
+      <button class="ntab" onclick="setNtab('makro',this)">Makro Sekunder</button>
+      <button class="ntab" onclick="setNtab('mikro',this)">Mikro</button>
+      <button class="ntab" onclick="setNtab('defisiensi',this)">Gejala Kekurangan</button>
+    </div>
+    <div id="nutrient-list"></div>
+  </div>
+
+  <!-- ANALISIS -->
+  <div id="analisis" class="section">
+    <div class="analysis-tabs">
+      <button class="atab active" onclick="setAtab('biaya',this)">💰 Biaya</button>
+      <button class="atab" onclick="setAtab('pendapatan',this)">📈 Pendapatan</button>
+      <button class="atab" onclick="setAtab('hasil',this)">📊 Hasil</button>
+    </div>
+
+    <!-- BIAYA -->
+    <div id="atab-biaya">
+      <div class="card">
+        <div class="card-title"><span>🌱</span> Input Usaha Tani</div>
+        <div class="form-group">
+          <label class="form-label">Jenis Komoditas</label>
+          <select class="form-control" id="a-komoditas">
+            <option value="cabai">Cabai Merah</option>
+            <option value="padi">Padi</option>
+            <option value="jagung">Jagung</option>
+            <option value="kedelai">Kedelai</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Luas Lahan (Ha)</label>
+          <input type="number" class="form-control" id="a-luas" placeholder="1" value="1" step="0.25">
+        </div>
+        <div class="card-title" style="margin-top:6px;"><span>💸</span> Biaya Produksi</div>
+        <div class="input-row">
+          <div class="form-group">
+            <label class="form-label">Benih (Rp)</label>
+            <input type="number" class="form-control" id="a-benih" placeholder="500000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pupuk (Rp)</label>
+            <input type="number" class="form-control" id="a-pupuk" placeholder="1500000">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label class="form-label">Pestisida (Rp)</label>
+            <input type="number" class="form-control" id="a-pestisida" placeholder="800000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tenaga Kerja (Rp)</label>
+            <input type="number" class="form-control" id="a-tk" placeholder="3000000">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label class="form-label">Pengolahan (Rp)</label>
+            <input type="number" class="form-control" id="a-olah" placeholder="1000000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Biaya Lain (Rp)</label>
+            <input type="number" class="form-control" id="a-lain" placeholder="500000">
+          </div>
+        </div>
+        <button class="btn btn-secondary" onclick="setAtab('pendapatan', document.querySelectorAll('.atab')[1]); isiDefault()">Lanjut → Pendapatan</button>
+      </div>
+    </div>
+
+    <!-- PENDAPATAN -->
+    <div id="atab-pendapatan" style="display:none;">
+      <div class="card">
+        <div class="card-title"><span>📈</span> Data Produksi & Harga</div>
+        <div class="form-group">
+          <label class="form-label">Estimasi Produksi (kg/Ha)</label>
+          <input type="number" class="form-control" id="a-produksi" placeholder="Contoh: 10000">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Harga Jual (Rp/kg)</label>
+          <input type="number" class="form-control" id="a-harga" placeholder="Contoh: 15000">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Harga Pasar Saat Ini</label>
+          <select class="form-control" id="a-pasar">
+            <option value="rendah">Rendah (musim panen raya)</option>
+            <option value="normal" selected>Normal</option>
+            <option value="tinggi">Tinggi (off-season)</option>
+          </select>
+        </div>
+        <button class="btn btn-orange" onclick="hitungAnalisis(); setAtab('hasil', document.querySelectorAll('.atab')[2])">📊 Analisis Sekarang</button>
+      </div>
+    </div>
+
+    <!-- HASIL -->
+    <div id="atab-hasil" style="display:none;">
+      <div id="hasil-analisis">
+        <div class="card" style="text-align:center; padding:30px;">
+          <div style="font-size:48px; margin-bottom:12px;">📊</div>
+          <div style="color:var(--text-muted); font-size:14px;">Isi data biaya dan pendapatan<br>lalu klik Analisis Sekarang</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">© 2026 AgroSmart · Pertanian Cerdas Indonesia 🇮🇩</div>
+<div class="footer">© Politeknik Pembangunan Pertanian Yogyakarta-Magelang 
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
